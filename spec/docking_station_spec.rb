@@ -6,6 +6,18 @@ describe DockingStation do
   let(:subject) { described_class.new }
   let(:bike){double(:bike)}
 
+  describe "#initialization" do
+    
+    it "has a default capacity" do
+      expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+    end
+
+    it "allows the capacity to be changed" do
+      docking_station = DockingStation.new(40)
+      expect(docking_station.capacity).to eq 40
+    end
+  end
+
   describe '#release_bike' do
     it 'docking station responds to the method release_bike' do
       expect(subject).to respond_to :release_bike
