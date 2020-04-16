@@ -10,4 +10,8 @@ class Van
     @trailer.push(bike)
   end
 
+  def drop_off
+    @trailer.pop
+  end
+
 end

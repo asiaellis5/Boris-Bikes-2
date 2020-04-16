@@ -7,9 +7,16 @@ describe Van do
 
   describe "#pick_up" do
     it "picks up a broken bike from a docking station" do
-      allow(bike).to receive(:working?).and_return false
       subject.pick_up(bike)
       expect(subject.trailer.length).to eq 1
+    end
+  end
+
+  describe "#drop_off" do
+    it "drops off a bike" do 
+      subject.pick_up(bike)
+      expect(subject.drop_off).to eq bike
+      expect(subject.trailer.length).to eq 0
     end
   end
 end
