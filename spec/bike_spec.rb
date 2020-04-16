@@ -14,4 +14,11 @@ describe Bike do
       expect(subject.working?).to be true
     end
   end
+
+  describe "#report_broken" do
+    it "flags a broken bike" do
+      subject.report_broken
+      expect(subject.working?).to be false
+    end
+  end
 end
