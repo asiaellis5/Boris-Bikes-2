@@ -21,4 +21,15 @@ describe DockingStation do
       expect(bike.working?).to eq('true')
     end
   end
+
+  describe "#dock_bike" do
+    it "docking station responds to the method dock_bike" do
+      expect(subject).to respond_to :dock_bike
+    end
+
+    it "docks a bike" do
+      subject.dock_bike(bike)
+      expect(subject.docked_bikes.length).to eq 1
+    end
+  end
 end
