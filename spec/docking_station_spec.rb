@@ -22,6 +22,10 @@ describe DockingStation do
       bike1 = subject.release_bike
       expect(bike1.working?).to eq('true')
     end
+
+    it "raises an error when there is no bike to release" do
+      expect{subject.release_bike}.to raise_error 'No bikes available'
+    end
   end
 
   describe "#dock_bike" do

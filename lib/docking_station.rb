@@ -11,6 +11,7 @@ class DockingStation
   end
 
   def release_bike
+    raise 'No bikes available' if @docked_bikes.length <= 0
     @docked_bikes.pop
   end
 
