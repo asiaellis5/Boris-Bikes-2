@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'bike'
+require_relative 'van'
 
 class DockingStation
 
@@ -8,15 +9,21 @@ class DockingStation
 
   attr_reader :docked_bikes, :capacity
 
-  def initialize(capacity = DEFAULT_CAPACITY)
+  def initialize(capacity = DEFAULT_CAPACITY, van= Van.new)
     @docked_bikes = []
     @capacity = capacity
+    @van = van
   end
 
   def release_bike
     raise 'No bikes available' if empty?
-    raise 'Sorry bike broken' if broken?
-    @docked_bikes.pop
+    if broken?
+      @van.pick_up(@docked_bikes.pop)
+      raise 'Sorry bike broken'
+    else
+      @docked_bikes.pop
+    end
+   
   end
 
   def dock_bike(bike)
@@ -36,5 +43,7 @@ class DockingStation
 
   def broken?
     !@docked_bikes[-1].working?
+    
+   
   end
 end

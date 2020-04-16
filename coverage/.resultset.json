@@ -128,7 +128,6 @@
           null,
           null,
           1,
-          null,
           1,
           null,
           1,
@@ -136,6 +135,9 @@
           1,
           null,
           1,
+          null,
+          1,
+          11,
           11,
           11,
           null,
@@ -143,7 +145,12 @@
           1,
           5,
           4,
+          1,
+          1,
+          null,
           3,
+          null,
+          null,
           null,
           null,
           1,
@@ -164,10 +171,48 @@
           1,
           4,
           null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/lib/van.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          12,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/spec/van_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1587050828
+    "timestamp": 1587053563
   }
 }
