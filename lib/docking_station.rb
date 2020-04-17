@@ -32,6 +32,7 @@ class DockingStation
   end
 
   def dock_fixed_bike
+    raise 'Docking Station Full' if full?
     @docked_bikes.push(@van.drop_off_docking)
   end
 

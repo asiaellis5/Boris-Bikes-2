@@ -70,5 +70,10 @@ describe DockingStation do
       subject.dock_fixed_bike
       expect(subject.docked_bikes.length).to eq 2
     end
+
+    it "raises an error if dock is full" do
+      (DockingStation::DEFAULT_CAPACITY - 1).times { subject.dock_bike(bike) }
+      expect{subject.dock_fixed_bike}.to raise_error 'Docking Station Full'
+    end
   end
 end
