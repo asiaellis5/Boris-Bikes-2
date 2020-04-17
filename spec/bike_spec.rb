@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'bike'
 
 describe Bike do
@@ -19,6 +17,14 @@ describe Bike do
     it "flags a broken bike" do
       subject.report_broken
       expect(subject.working?).to be false
+    end
+  end
+
+  describe "#fix" do
+    it "fixes a bike" do
+      subject.report_broken
+      subject.fix
+      expect(subject.working?).to be true
     end
   end
 end

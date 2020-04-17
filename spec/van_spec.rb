@@ -17,7 +17,7 @@ describe Van do
     it "drops off a bike" do 
       allow(bike).to receive(:working?).and_return true
       subject.pick_up(bike)
-      expect(subject.drop_off).to eq bike
+      subject.drop_off
       expect(subject.trailer.length).to eq 0
     end
   end

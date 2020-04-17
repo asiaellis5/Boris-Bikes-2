@@ -10,12 +10,11 @@ class Van
   end
 
   def pick_up(bike)
-    @garage.fix_bike(bike)
     @trailer.push(bike)
   end
 
   def drop_off
-    @trailer.pop
+   @garage.unload_bike(@trailer.pop)
   end
 
 end
