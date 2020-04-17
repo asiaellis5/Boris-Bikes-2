@@ -64,4 +64,11 @@ describe DockingStation do
       expect{subject.dock_bike(bike)}.to raise_error 'Docking Station Full'
     end
   end
+
+  describe "#dock_fixed_bike" do
+    it "docks a bike once it has been fixed" do
+      subject.dock_fixed_bike
+      expect(subject.docked_bikes.length).to eq 2
+    end
+  end
 end

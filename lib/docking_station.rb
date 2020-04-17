@@ -18,7 +18,7 @@ class DockingStation
   def release_bike
     raise 'No bikes available' if empty?
     if broken?
-      @van.pick_up(@docked_bikes.pop)
+      @van.pick_up_docking(@docked_bikes.pop)
       raise 'Sorry bike broken'
     else
       @docked_bikes.pop
@@ -29,6 +29,10 @@ class DockingStation
   def dock_bike(bike)
     raise 'Docking Station Full' if full?
     @docked_bikes.push(bike)
+  end
+
+  def dock_fixed_bike
+    @docked_bikes.push(@van.drop_off_docking)
   end
 
   private
