@@ -37,7 +37,7 @@ docking_station.van.drop_off_garage
 docking_station.van.garage.fix_bike
 docking_station.van.pick_up_garage
 docking_station.drop_off_docking
-ds.release_bike
+docking_station.release_bike
 ```
 
 ---
