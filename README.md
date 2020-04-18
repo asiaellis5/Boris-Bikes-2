@@ -133,5 +133,3 @@ I'd like vans to collect working bikes from garages and distribute them to docki
 ```
 
 ---
-
-x
