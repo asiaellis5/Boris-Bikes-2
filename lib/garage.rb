@@ -2,21 +2,24 @@ require_relative 'van'
 
 class Garage
 
-  attr_reader :workshop
+  DEFAULT_CAPACITY = 20
 
-  def initialize()
-    @workshop = []
+  attr_reader :bikes
+
+  def initialize(capacity = DEFAULT_CAPACITY)
+    @bikes = []
+    @capacity = capacity
   end
 
   def unload_bike(bike)
-    @workshop.push(bike)
+    @bikes.push(bike)
   end
 
   def load_bike
-    @workshop.pop
+    @bikes.pop
   end
 
   def fix_bike
-     @workshop[-1].fix
+     @bikes[-1].fix
   end
 end

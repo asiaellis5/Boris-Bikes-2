@@ -8,7 +8,7 @@ describe Garage do
   describe "#unload_bike" do
     it "unloads a bike into the garage" do
     subject.unload_bike(bike)
-    expect(subject.workshop.length).to eq 1
+    expect(subject.bikes.length).to eq 1
     end
   end
 
@@ -25,7 +25,7 @@ describe Garage do
   describe "#load_bike" do
     it "loads a bike on to a van" do
       subject.load_bike
-      expect(subject.workshop.length).to eq 0
+      expect(subject.bikes.length).to eq 0
     end
   end
 end

@@ -2,27 +2,30 @@ require_relative 'garage'
 
 class Van
 
-  attr_reader :trailer, :garage
+  DEFAULT_CAPACITY = 20
 
-  def initialize(garage = Garage.new)
-    @trailer = []
+  attr_reader :bikes, :garage, :capacity
+
+  def initialize(garage = Garage.new, capacity= DEFAULT_CAPACITY)
+    @bikes = []
     @garage = garage
+    @capacity = capacity
   end
 
   def pick_up_docking(bike)
-    @trailer.push(bike)
+    @bikes.push(bike)
   end
 
   def pick_up_garage
-    @trailer.push(@garage.load_bike)
+    @bikes.push(@garage.load_bike)
   end
 
   def drop_off_garage
-   @garage.unload_bike(@trailer.pop)
+   @garage.unload_bike(@bikes.pop)
   end
 
   def drop_off_docking
-    @trailer.pop
+    @bikes.pop
   end
 
 end
