@@ -1,6 +1,46 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/spec/bike_container_test_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/lib/bike_container.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/spec/support/shared_examples_for_bike_container.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/asiaellis/Projects/course-run-through/boris-bikes-2/spec/bike_spec.rb": {
         "lines": [
           1,
@@ -342,6 +382,6 @@
         ]
       }
     },
-    "timestamp": 1587202269
+    "timestamp": 1587553040
   }
 }
