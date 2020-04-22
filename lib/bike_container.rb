@@ -13,6 +13,11 @@ module BikeContainer
     @bikes.push(bike)
   end
 
+  def remove_bike
+    raise "#{self.class.name} empty" if empty?
+    @bikes.pop
+  end
+
   def full?
     @bikes.length >= @capacity
   end
