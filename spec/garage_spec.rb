@@ -1,4 +1,5 @@
 require 'garage'
+require 'support/shared_examples_for_bike_container'
 
 describe Garage do
 
@@ -24,8 +25,10 @@ describe Garage do
 
   describe "#load_bike" do
     it "loads a bike on to a van" do
+      subject.unload_bike(bike)
       subject.load_bike
       expect(subject.bikes.length).to eq 0
     end
   end
+  it_behaves_like BikeContainer
 end

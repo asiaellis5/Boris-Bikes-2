@@ -6,7 +6,7 @@ class Van
 
   DEFAULT_CAPACITY = 20
 
-  attr_reader :bikes, :garage, :capacity
+  attr_reader :bikes
 
 
   def pick_up(bike)
